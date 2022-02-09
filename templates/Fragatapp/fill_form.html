@@ -1,0 +1,16 @@
+{% extends 'Fragatapp/base.html' %}
+
+{% block content %}
+
+    <article class="post">
+
+        {% if post.published_date %}
+            <time class="date">
+                {{ post.published_date }}
+            </time>
+        {% endif %}
+        <h1>Вы зарезервировали</h1>
+        <h2>Место : {{ post.place }}</h2>
+        <h2>Время : {{ post.time|linebreaksbr}}</h2>
+    </article>
+{% endblock %}
